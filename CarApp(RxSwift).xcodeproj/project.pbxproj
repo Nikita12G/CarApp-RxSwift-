@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A84044F7FB0D14540B0E5FF /* libPods-CarApp(RxSwift).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B252C5524BBCF16CCADD2C /* libPods-CarApp(RxSwift).a */; };
+		A1744E4827B63763007AE2C9 /* SelectedCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1744E4727B63763007AE2C9 /* SelectedCompanyViewController.swift */; };
 		A190C25D27AD2AD1001FC267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190C25C27AD2AD1001FC267 /* AppDelegate.swift */; };
 		A190C25F27AD2AD1001FC267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190C25E27AD2AD1001FC267 /* SceneDelegate.swift */; };
-		A190C26127AD2AD1001FC267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190C26027AD2AD1001FC267 /* ViewController.swift */; };
-		A190C26427AD2AD1001FC267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A190C26227AD2AD1001FC267 /* Main.storyboard */; };
+		A190C26127AD2AD1001FC267 /* CarCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190C26027AD2AD1001FC267 /* CarCompanyViewController.swift */; };
 		A190C26627AD2AD2001FC267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A190C26527AD2AD2001FC267 /* Assets.xcassets */; };
 		A190C26927AD2AD2001FC267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A190C26727AD2AD2001FC267 /* LaunchScreen.storyboard */; };
+		A190C27527AD2E24001FC267 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190C27427AD2E24001FC267 /* CarModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BF772F5CC0A6BF169B49DCF /* Pods-CarApp(RxSwift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp(RxSwift).debug.xcconfig"; path = "Target Support Files/Pods-CarApp(RxSwift)/Pods-CarApp(RxSwift).debug.xcconfig"; sourceTree = "<group>"; };
+		28B252C5524BBCF16CCADD2C /* libPods-CarApp(RxSwift).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarApp(RxSwift).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1744E4727B63763007AE2C9 /* SelectedCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCompanyViewController.swift; sourceTree = "<group>"; };
 		A190C25927AD2AD1001FC267 /* CarApp(RxSwift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CarApp(RxSwift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A190C25C27AD2AD1001FC267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A190C25E27AD2AD1001FC267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A190C26027AD2AD1001FC267 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A190C26327AD2AD1001FC267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A190C26027AD2AD1001FC267 /* CarCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCompanyViewController.swift; sourceTree = "<group>"; };
 		A190C26527AD2AD2001FC267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A190C26827AD2AD2001FC267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A190C26A27AD2AD2001FC267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A190C27427AD2E24001FC267 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		BA709008FE201ADF76D69FBF /* Pods-CarApp(RxSwift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp(RxSwift).release.xcconfig"; path = "Target Support Files/Pods-CarApp(RxSwift)/Pods-CarApp(RxSwift).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A84044F7FB0D14540B0E5FF /* libPods-CarApp(RxSwift).a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25B9DB94E60428FAFA92E342 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28B252C5524BBCF16CCADD2C /* libPods-CarApp(RxSwift).a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72D622C2C9B7EED0225210A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BF772F5CC0A6BF169B49DCF /* Pods-CarApp(RxSwift).debug.xcconfig */,
+				BA709008FE201ADF76D69FBF /* Pods-CarApp(RxSwift).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A190C25027AD2AD1001FC267 = {
 			isa = PBXGroup;
 			children = (
 				A190C25B27AD2AD1001FC267 /* CarApp(RxSwift) */,
 				A190C25A27AD2AD1001FC267 /* Products */,
+				72D622C2C9B7EED0225210A9 /* Pods */,
+				25B9DB94E60428FAFA92E342 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +82,48 @@
 		A190C25B27AD2AD1001FC267 /* CarApp(RxSwift) */ = {
 			isa = PBXGroup;
 			children = (
+				A190C27027AD2B3E001FC267 /* Resourse */,
+				A190C27127AD2B96001FC267 /* ViewControllers */,
+				A190C27327AD2E05001FC267 /* Models */,
+				A190C27227AD2BA7001FC267 /* App */,
+			);
+			path = "CarApp(RxSwift)";
+			sourceTree = "<group>";
+		};
+		A190C27027AD2B3E001FC267 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
 				A190C25C27AD2AD1001FC267 /* AppDelegate.swift */,
 				A190C25E27AD2AD1001FC267 /* SceneDelegate.swift */,
-				A190C26027AD2AD1001FC267 /* ViewController.swift */,
-				A190C26227AD2AD1001FC267 /* Main.storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		A190C27127AD2B96001FC267 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A190C26027AD2AD1001FC267 /* CarCompanyViewController.swift */,
+				A1744E4727B63763007AE2C9 /* SelectedCompanyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A190C27227AD2BA7001FC267 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				A190C26527AD2AD2001FC267 /* Assets.xcassets */,
 				A190C26727AD2AD2001FC267 /* LaunchScreen.storyboard */,
 				A190C26A27AD2AD2001FC267 /* Info.plist */,
 			);
-			path = "CarApp(RxSwift)";
+			path = App;
+			sourceTree = "<group>";
+		};
+		A190C27327AD2E05001FC267 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A190C27427AD2E24001FC267 /* CarModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +133,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A190C26D27AD2AD2001FC267 /* Build configuration list for PBXNativeTarget "CarApp(RxSwift)" */;
 			buildPhases = (
+				F26D1285CDFDF5151A2D0F39 /* [CP] Check Pods Manifest.lock */,
 				A190C25527AD2AD1001FC267 /* Sources */,
 				A190C25627AD2AD1001FC267 /* Frameworks */,
 				A190C25727AD2AD1001FC267 /* Resources */,
@@ -127,18 +187,44 @@
 			files = (
 				A190C26927AD2AD2001FC267 /* LaunchScreen.storyboard in Resources */,
 				A190C26627AD2AD2001FC267 /* Assets.xcassets in Resources */,
-				A190C26427AD2AD1001FC267 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F26D1285CDFDF5151A2D0F39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarApp(RxSwift)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A190C25527AD2AD1001FC267 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A190C26127AD2AD1001FC267 /* ViewController.swift in Sources */,
+				A190C27527AD2E24001FC267 /* CarModel.swift in Sources */,
+				A1744E4827B63763007AE2C9 /* SelectedCompanyViewController.swift in Sources */,
+				A190C26127AD2AD1001FC267 /* CarCompanyViewController.swift in Sources */,
 				A190C25D27AD2AD1001FC267 /* AppDelegate.swift in Sources */,
 				A190C25F27AD2AD1001FC267 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +233,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A190C26227AD2AD1001FC267 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A190C26327AD2AD1001FC267 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A190C26727AD2AD2001FC267 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +362,7 @@
 		};
 		A190C26E27AD2AD2001FC267 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BF772F5CC0A6BF169B49DCF /* Pods-CarApp(RxSwift).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,10 +370,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HDWNKQ472C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CarApp(RxSwift)/Info.plist";
+				INFOPLIST_FILE = "CarApp(RxSwift)/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,12 +384,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A190C26F27AD2AD2001FC267 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA709008FE201ADF76D69FBF /* Pods-CarApp(RxSwift).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,10 +398,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HDWNKQ472C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CarApp(RxSwift)/Info.plist";
+				INFOPLIST_FILE = "CarApp(RxSwift)/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
