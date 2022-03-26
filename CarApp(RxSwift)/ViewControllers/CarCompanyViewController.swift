@@ -17,29 +17,47 @@ class CarCompanyViewController: UIViewController {
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.keyboardDismissMode = .onDrag
+        table.isUserInteractionEnabled = false
         return table
+    }()
+    
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.searchBarStyle = UISearchBar.Style.default
+        searchBar.placeholder = " Search car company..."
+        searchBar.sizeToFit()
+        searchBar.isTranslucent = false
+        searchBar.endEditing(true)
+        return searchBar
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
         tableView.frame = view.bounds
-        configureTable()
+        navigationItem.titleView = searchBar
         transitionFromСell()
-        title = "Car Company"
+        carQuery()
     }
     
-    private func configureTable() {
-        // Bind table
-        carsModel.bind(
-            to:
-                tableView.rx.items(
-                    cellIdentifier: "cell",
-                    cellType: UITableViewCell.self)) { tv, item, cell in
-                        cell.textLabel?.text = item.brand
-                        cell.imageView?.image = item.icon
-                    }.disposed(by: bag)
-        
+    private func carQuery() {
+        _ = searchBar.rx.text.orEmpty
+            .throttle(.microseconds(200), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .map { query in
+                self.carsModel.value.filter { cars in
+                    query.isEmpty || cars.brand.lowercased().contains(query.lowercased())
+                }
+            }.bind(
+                to:
+                    tableView.rx.items(
+                        cellIdentifier: "cell",
+                        cellType: UITableViewCell.self)) { tv, item, cell in
+                            cell.textLabel?.text = item.brand
+                            cell.imageView?.image = item.icon
+                        }.disposed(by: bag)
+            
         // Handle selection
         tableView.rx.modelSelected(Cars.self).bind { selectedItem in
             print("Selected car company \(selectedItem.brand) ")

@@ -18,7 +18,7 @@ struct Cars {
 }
 
 
-let items = Observable.just ([
+let items = BehaviorRelay.init(value:[
     Cars(brand: "Acura", icon: UIImage(named: "Acura")!),
     Cars(brand: "Alfa", icon: UIImage(named: "Alfa")!),
     Cars(brand: "BMW", icon: UIImage(named: "BMW")!),
