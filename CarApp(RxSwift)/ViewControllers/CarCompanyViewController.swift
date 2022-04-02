@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxDataSources
 
 class CarCompanyViewController: UIViewController {
     
@@ -14,11 +15,23 @@ class CarCompanyViewController: UIViewController {
     private let bag = DisposeBag()
     private let selectedCompanyViewController = SelectedCompanyViewController()
     
+    private let dataSources = RxTableViewSectionedReloadDataSource<SectionModel>(configureCell: {
+        ds, tv, ip, items in
+        let cell: CarCompanyTableViewCell = tv.dequeueReusableCell(withIdentifier: CarCompanyTableViewCell.reuseIdentifier, for: ip) as! CarCompanyTableViewCell
+        cell.carsLabel.text = items.brand
+        cell.cellCarImageView.image = items.icon
+        return cell
+    },
+                                                                                 
+    titleForFooterInSection: {
+        ds, index in
+        return ds.sectionModels[index].header
+    })
+    
     private let tableView: UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(CarCompanyTableViewCell.self, forCellReuseIdentifier: CarCompanyTableViewCell.reuseIdentifier)
         table.keyboardDismissMode = .onDrag
-        table.isUserInteractionEnabled = false
         return table
     }()
     
@@ -45,19 +58,20 @@ class CarCompanyViewController: UIViewController {
         _ = searchBar.rx.text.orEmpty
             .throttle(.microseconds(200), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .map { query in
-                self.carsModel.value.filter { cars in
-                    query.isEmpty || cars.brand.lowercased().contains(query.lowercased())
-                }
-            }.bind(
-                to:
-                    tableView.rx.items(
-                        cellIdentifier: "cell",
-                        cellType: UITableViewCell.self)) { tv, item, cell in
-                            cell.textLabel?.text = item.brand
-                            cell.imageView?.image = item.icon
-                        }.disposed(by: bag)
-            
+            .map ({ query in
+                self.carsModel.value.map ({ sectionModel in
+                    SectionModel(header: sectionModel.header, items: sectionModel.items.filter ({
+                        cars in
+                        query.isEmpty || cars.brand.lowercased().contains(query.lowercased())
+                    }))
+                })
+            })
+                .bind(to:
+                    tableView
+                        .rx
+                        .items(dataSource: dataSources))
+                        .disposed(by: bag)
+        
         // Handle selection
         tableView.rx.modelSelected(Cars.self).bind { selectedItem in
             print("Selected car company \(selectedItem.brand) ")
